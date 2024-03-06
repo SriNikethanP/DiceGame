@@ -17,22 +17,32 @@ const DiceRoll = () => {
                   </div>
         </div>
       </div>
-      <div>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
+        
+        <div className="diceBtn">
+          <img src="/images/dice_1.png" alt="dice 1" />
           <p>Click on Dice to roll</p>
           <Button>Reset Score</Button>
           <Button>Show Rules</Button>
         </div>
-      </div>
     </Container>
   );
 };
 
 export default DiceRoll;
 const Container = styled.div`
+
+.diceBtn{
+  img{
+    width: 250px;
+    height: 250px;
+  }
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -71,7 +81,22 @@ const ScoreCounter = styled.div`
   }
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+ width: 220px;
+  background-color: black;
+  height: 44px;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &: hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+`;
 
 const Box = styled.div`
 width: 72px;
