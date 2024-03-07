@@ -1,10 +1,7 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StartGame = (props) => {
-
-
-
   return (
     <Container>
       <div className="mainImage">

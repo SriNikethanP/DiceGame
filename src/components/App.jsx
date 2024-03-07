@@ -1,22 +1,19 @@
-import React, { useState } from 'react'
-import StartGame from './StartGame'
-import DiceRoll from './DiceRoll';
+import React, { useState } from "react";
+import StartGame from "./StartGame";
+import DiceRoll from "./DiceRoll";
 
 const App = () => {
+  const [gameStarted, setGameState] = useState(false);
 
-    const [gameStarted, setGameState] = useState(false);
+  function toggleGameState() {
+    setGameState((prev) => !prev);
+  }
 
-    function toggleGameState() {
-        setGameState((prev)=>(!prev))
-    }
-    
-    return (
-      
-
+  return (
     <div>
-            {gameStarted ?   <DiceRoll/> : <StartGame toggle={ toggleGameState} />}
+      {gameStarted ? <DiceRoll /> : <StartGame toggle={toggleGameState} />}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
